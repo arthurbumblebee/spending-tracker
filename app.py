@@ -12,7 +12,8 @@ def parse_email():
     body = payload["body"]
     subject = payload["subject"]
     sheet = Sheets()
-    print(repr(body))
+    # print(repr(body))
+    print(repr(subject))
 
     if "You paid" in subject:
         description = extract("(?<=\) \\n \\n)(.*)(?= \\n \ T)", body)
